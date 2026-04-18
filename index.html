@@ -7,17 +7,27 @@
 <style>
 body {
   margin: 0;
+  padding: 0;
+  min-height: 100vh;
   font-family: cursive;
   text-align: center;
-  background: linear-gradient(to right, #ffd6e0, #fff0f5);
-  overflow: hidden;
+  background: linear-gradient(to bottom, #ffd6e0, #fff0f5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slide {
   display: none;
-  padding: 40px;
+  width: 100%;
+  max-width: 500px;
 }
-
+.slide {
+  background: rgba(255,255,255,0.4);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  }
 .active {
   display: block;
 }
