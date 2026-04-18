@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Mami 💖</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: cursive;
+  text-align: center;
+  background: linear-gradient(to right, #ffd6e0, #fff0f5);
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  padding: 40px;
+}
+
+.active {
+  display: block;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+p {
+  font-size: 20px;
+}
+
+img {
+  width: 220px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #ff85a2;
+  color: white;
+  margin-top: 20px;
+}
+
+/* sparkles */
+.sparkle {
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  animation: move 4s linear infinite;
+}
+
+@keyframes move {
+  from {transform: translateY(0);}
+  to {transform: translateY(100vh);}
+}
+</style>
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio autoplay loop>
+  <source src="https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3">
+</audio>
+
+<!-- SLIDE 1 -->
+<div class="slide active">
+  <h1>🎂 Happy Birthday Mami 💖</h1>
+  <p>Click below for something special 🎁</p>
+  <button onclick="nextSlide()">Next ➡️</button>
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide">
+  <p>
+  Shayad humari thodi si ladai ho gayi thi...  
+  par aap mere liye hamesha special ho 💕  
+  </p>
+  <button onclick="nextSlide()">Next ➡️</button>
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide">
+  <p>
+  Main kabhi kabhi gussa ho jati hoon   
+  but sach mein... mujhe aap bahut zyada pyari ho 💗  
+  </p>
+  <button onclick="nextSlide()">Next ➡️</button>
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide">
+  <p>
+  Aap sirf meri Mami nahi ho...  
+  meri best friend ho ✨  
+  </p>
+  <img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659">
+  <button onclick="nextSlide()">Next ➡️</button>
+</div>
+
+<!-- SLIDE 5 -->
+<div class="slide">
+  <p>
+  Bhagwan kare aap hamesha khush raho 💖  
+  aur humesha aise hi cute raho 🎀  
+  </p>
+  <img src="https://images.unsplash.com/photo-1504198453319-5ce911bafcde">
+  <button onclick="nextSlide()">Next ➡️</button>
+</div>
+
+<!-- SLIDE 6 -->
+<div class="slide">
+  <p>
+  Once again Happy Birthday Mami 🎉  
+  Love you sooo much 💞  
+  </p>
+  <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba">
+</div>
+
+<script>
+let current = 0;
+let slides = document.querySelectorAll(".slide");
+
+function nextSlide() {
+  slides[current].classList.remove("active");
+  current++;
+  if(current < slides.length){
+    slides[current].classList.add("active");
+  }
+}
+
+/* sparkles */
+for(let i=0;i<40;i++){
+ let s=document.createElement("div");
+ s.className="sparkle";
+ s.style.left=Math.random()*100+"%";
+ document.body.appendChild(s);
+}
+</script>
+
+</body>
+</html>
